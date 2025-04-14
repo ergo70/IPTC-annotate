@@ -16,7 +16,7 @@ python iptc_annotate.py <directory>
 ## Command line options
 ```
 -o | --overwrite -> Overwrite existing entries
--l | --language <ISO 936-1 code> -> Translate English into target language, not implememented yet.
+-l | --language <ISO 936-1 code> -> Translate English into target language. Not implememented yet.
 ```
 ## Config file iptc_annotate.conf
 If not present, defaults are used:
