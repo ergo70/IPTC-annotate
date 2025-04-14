@@ -1,5 +1,5 @@
 # IPTC-annotate
-Automatic annotation of JPEG images with IPTC data for five keywords and a caption/abstract, using llava 1.6 running on ollama. 
+Automatic recursive annotation of JPEG images with IPTC data for five keywords and a caption/abstract, using llava 1.6 running on ollama. 
 ## Install
 Install [ollama](https://ollama.com/).
 ```
