@@ -27,4 +27,4 @@ base_URL = http://localhost:11434
 timeout = 120
 ```
 ## Speed
-On a Intel Core) i7-13700H, 32 GB, Nvidia RTX 2000 Ada, 8 GB, Windows 11 Pro x64: About 4 seconds per image.
+On a Intel Core) i7-13700H, 32 GB, Nvidia RTX 2000 Ada, 8 GB, Windows 11 Pro x64: About 4 seconds per image with the llava:7b model. Larger models slow down annotation without noticeable improvement in annotation quality.
