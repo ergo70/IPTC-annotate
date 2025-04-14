@@ -10,5 +10,11 @@ pip install -r requirements.txt
 ```
 ## Run
 ```
+activate .venv
 python iptc_annotate.py <directory>
+```
+## Command line options
+```
+-o | --overwrite Overwrite existing entries
+-l | --language <ISO 936-1 code> Translate English into target language, not implememented yet.
 ```
