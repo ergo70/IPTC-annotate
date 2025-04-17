@@ -131,7 +131,11 @@ def annotate_image(image_path: str = None, configuration: Configuration = None) 
         base_url=configuration.ollama_base_url,
     )
 
-    info = IPTCInfo(image_path, force=True)
+    info = IPTCInfo(image_path, force=True,
+                    inp_charset="""utf-8""", out_charset="""utf-8""")
+    if not info:
+        LOGGER.error(f"""Input image {image_path} not readable.""")
+        return None
 
     if configuration.overwrite:
         old_keywords = None
@@ -180,7 +184,7 @@ def annotate_image(image_path: str = None, configuration: Configuration = None) 
                 f"""Error annotating image {image_path} with caption/abstract: {e}.""")
 
     if must_save:
-        info.save()
+        info.save(options=["overwrite"])
     else:
         LOGGER.warning(f"""No changes made to {image_path}.""")
 
@@ -193,7 +197,7 @@ def annotate_images(configuration: Configuration) -> None:
         LOGGER.error("""No working directory provided.""")
         return None
 
-    for root, _, filenames in walk(configuration.directory):
+    for root, _, filenames in walk(configuration.directory, topdown=True):
         for filename in filenames:
             image_path = path.join(root, filename)
             if image_path.lower().endswith((""".jpg""", """.jpeg""")):
