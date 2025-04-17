@@ -31,4 +31,4 @@ timeout = 120
 On a Intel Core) i7-13700H, 32 GB, Nvidia RTX 2000 Ada, 8 GB, Windows 11 Pro x64: About 4 seconds per image with the llava:7b model. Larger models slow down annotation without noticeable improvement in annotation quality.
 
 ## Caveats
-caption/abstract is written and can be read back by IPTCInfo3, yet it is not visible e.g. with CaptureOne in images coming from a Canon Powershot G12 (2010-2012). Reason unknown, probably changes in the IPTC specification after the Powershot G12 was discontinued in 2012 or some issue of IPTCInfo3. IPhone and Android photos behave as expected.
+caption/abstract is written and can be read back by IPTCInfo3, yet it is not visible e.g. with CaptureOne in images coming from a Canon Powershot G12 (2010-2012). Reason unknown, probably changes in the IPTC specification after the Powershot G12 was discontinued in 2012 or some issue of IPTCInfo3. IPhone and Android photos behave as expected. On the other hand, GIMP3 has no issues showing the data for all images so it might also be a problem of the viewers.
