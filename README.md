@@ -9,6 +9,7 @@ activate .venv
 pip install -r requirements.txt
 ```
 ## Run
+Annotate all JPEG images in <directory> and its subdirectories.
 ```
 activate .venv
 python iptc_annotate.py <directory>
